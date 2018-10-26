@@ -1,0 +1,16 @@
+body{
+    background: url('../img/rojo.jpg');
+    background-attachment: fixed;
+}
+#logo{
+    background: rgb(214, 68, 68);
+}
+#menu ul li:hover{
+    background:  rgb(214, 68, 68);
+}
+.button-plus{
+    background:  rgb(214, 68, 68);
+}
+footer{
+    background:  rgb(214, 68, 68);
+}
