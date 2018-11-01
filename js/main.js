@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    if(window.location.href.indexOf("index") > -1 ){
+
    $('.bxslider').bxSlider({
         mode: 'fade',
         captions: false,
@@ -7,6 +9,8 @@ $(document).ready(function(){
         slideWidth: 1200
    });
     
+
+
    var posts = [
 
     {
@@ -48,6 +52,8 @@ $(document).ready(function(){
 
         $("#posts").append(post);
    });
+
+}
 
    //Selecciona el tema
    var tema = $("#theme");
@@ -92,7 +98,27 @@ $(document).ready(function(){
     $("#logout").click(function(){
         localStorage.removeItem("form-name");
         $("#namae").hide();
-        $("#login").show();
+        $("#login").show(); 
     });
+
+    if(window.location.href.indexOf("aboutme") > -1){
+        $("#acordeon").accordion();
+    }
+    
+    if(window.location.href.indexOf("reloj") > -1){
+    
+        setInterval(function(){
+            var reloj = moment().format("hh:mm:ss");
+            $("#reloj").html(reloj);
+        },1000);
+        
+    }
+
+    if(window.location.href.indexOf("contact") > -1){
+        $.validate({
+            lang: 'es',
+            errorMessagePosition: "top"
+        });
+    }
 
 });
